@@ -37,7 +37,7 @@ impl Material2d for GLSLMaterial {
     fn specialize(
         descriptor: &mut RenderPipelineDescriptor,
         #[allow(unused_variables)] layout: &MeshVertexBufferLayoutRef,
-        #[allow(unused_variables)] key: Material2dKey<Self>,
+        #[allow(unused_variables)] key: Material2dKey<Self>
     ) -> Result<(), SpecializedMeshPipelineError> {
         descriptor.vertex.entry_point = "main".into();
         descriptor.fragment.as_mut().unwrap().entry_point = "main".into();
